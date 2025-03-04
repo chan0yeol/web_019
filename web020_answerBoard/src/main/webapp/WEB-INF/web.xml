@@ -78,10 +78,6 @@
 	</servlet-mapping>
 
 
-
-
-
-
 	<filter>
 		<filter-name>AccessFilter</filter-name>
 		<filter-class>com.min.edu.comm.AccessFilter</filter-class>
