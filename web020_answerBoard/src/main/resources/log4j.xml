@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" 
+	"http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+<!-- 사용객체 콘솔 -->
+<appender name="c" class="org.apache.log4j.ConsoleAppender">
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%c{1}] [%p] %m%n"/>
+	</layout>
+</appender>
+
+<!-- 사용객체 파일 -->
+
+<appender name="f" class="org.apache.log4j.DailyRollingFileAppender">
+	<param name="File" value="./logs/answerboard.log"/>
+	<param name="DatePattern" value="'.'yyMMdd"/>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%c{1}] [%p] %m%n"/>
+	</layout>
+</appender>
+
+<!-- 공통으로 출력할 appender 선언 -->
+<logger name="java.sql.Connection">
+	<level value="TRACE"/>
+</logger>
+<logger name="java.sql.PreparedStatement">
+	<level value="TRACE"/>
+</logger>
+<logger name="java.sql.ResultSet">
+	<level value="TRACE"/>
+</logger>
+
+
+
+<!-- 로그레벨과 사용객체의 선언 -->
+<root>
+	<level value="TRACE"/>
+	<appender-ref ref="c" />
+	<appender-ref ref="f" />
+</root>
+
+
+	
+</log4j:configuration>

@@ -1,0 +1,14 @@
+[2024-12-27 12:13:02] [LogFactory] [DEBUG] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[2024-12-27 12:13:02] [PooledDataSource] [DEBUG] PooledDataSource forcefully closed/removed all connections.
+[2024-12-27 12:13:02] [PooledDataSource] [DEBUG] PooledDataSource forcefully closed/removed all connections.
+[2024-12-27 12:13:02] [PooledDataSource] [DEBUG] PooledDataSource forcefully closed/removed all connections.
+[2024-12-27 12:13:02] [PooledDataSource] [DEBUG] PooledDataSource forcefully closed/removed all connections.
+[2024-12-27 12:13:02] [UserDaoImpl] [INFO] UserDaoImpl 로그인 : {password=A001, id=A001}
+[2024-12-27 12:13:02] [JdbcTransaction] [DEBUG] Opening JDBC Connection
+[2024-12-27 12:13:02] [PooledDataSource] [DEBUG] Created connection 91323447.
+[2024-12-27 12:13:02] [JdbcTransaction] [DEBUG] Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@5717c37]
+[2024-12-27 12:13:02] [login] [DEBUG] ==>  Preparing: SELECT ID, NAME, AUTH, JOINDATE FROM BOARDUSER WHERE ID = ? AND PASSWORD = ?
+[2024-12-27 12:13:02] [login] [DEBUG] ==> Parameters: A001(String), A001(String)
+[2024-12-27 12:13:02] [login] [TRACE] <==    Columns: ID, NAME, AUTH, JOINDATE
+[2024-12-27 12:13:02] [login] [TRACE] <==        Row: A001, 햇빛, U, 2024-12-26 15:14:01
+[2024-12-27 12:13:02] [login] [DEBUG] <==      Total: 1
