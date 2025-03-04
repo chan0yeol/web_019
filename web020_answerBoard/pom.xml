@@ -10,18 +10,15 @@
   <properties>
 	  <slf4j-ver>2.0.16</slf4j-ver>
   </properties>
-  
-  <repositories>
-	  <repository>
-		  <id>local_repository</id>
-		  <name>local_repository</name>
-		  <url>file://${project.basedir}/repository/</url>
-	  </repository>
-  </repositories>
-  
   <dependencies>
 	  	<!-- 사용자 라이브러리 추가 -->
 	  	<!-- tomcat9, module version 4.0 --> 
+	  	<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>  <!-- 필요에 따라 버전 수정 -->
+		    <scope>provided</scope>
+		</dependency>
 		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>jstl</artifactId>
