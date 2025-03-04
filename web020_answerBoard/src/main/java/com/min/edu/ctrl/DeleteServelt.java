@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import com.min.edu.dto.UserDto;
 import com.min.edu.model.AnswerboardDaoImpl;
 import com.min.edu.model.IAnswerboardDao;
-import com.util.edu.Utility;
 
 public class DeleteServelt extends HttpServlet {
 
@@ -24,7 +23,7 @@ public class DeleteServelt extends HttpServlet {
 		UserDto loginDto = (UserDto)session.getAttribute("loginDto");
 		
 		if(!loginDto.getAuth().equalsIgnoreCase("A")) {
-			Utility.servlet_alert(resp, "삭제권한 없음", "loginServlet.do");
+//			Utility.servlet_alert(resp, "삭제권한 없음", "loginServlet.do");
 		} else {
 			IAnswerboardDao dao = new AnswerboardDaoImpl();
 			

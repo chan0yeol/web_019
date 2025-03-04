@@ -12,7 +12,7 @@ import com.min.edu.dto.AnswerboardDto;
 import com.min.edu.dto.UserDto;
 import com.min.edu.model.AnswerboardDaoImpl;
 import com.min.edu.model.IAnswerboardDao;
-import com.util.edu.Utility;
+//import com.util.edu.Utility;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -53,7 +53,7 @@ public class ReplyBoardServlet extends HttpServlet {
 		if(isc) {
 			resp.sendRedirect("./boardList.do");
 		}else {
-			Utility.servlet_alert(resp, "답글 작성 실패", "./replyBoard.do?seq="+seq);
+//			Utility.servlet_alert(resp, "답글 작성 실패", "./replyBoard.do?seq="+seq);
 		}
 	}
 }

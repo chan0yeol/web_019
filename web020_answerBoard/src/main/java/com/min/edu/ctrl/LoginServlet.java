@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 import com.min.edu.dto.UserDto;
 import com.min.edu.model.IUserDao;
 import com.min.edu.model.UserDaoImpl;
-import com.util.edu.Utility;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -45,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 //		log.info("로그인된 정보 {}", loginDto.getName());
 		
 		if(loginDto == null) {
-			Utility.servlet_alert(resp, "회원정보가 없습니다", "loginServlet.do");
+//			Utility.servlet_alert(resp, "회원정보가 없습니다", "loginServlet.do");
 		} else {
 			HttpSession session = req.getSession();
 			session.setAttribute("loginDto", loginDto);
